@@ -1,196 +1,74 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ricardo Rodriguez - Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    <nav class="nav-bar">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact<a/></li>
-        </ul>
-    </nav>
     
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </nav>
 
-    <section id="home" class="visible">
-        <div class="container">
-            <h1 class="name">Ricardo Rodriguez</h1>
-            <p class="title">Software Engineer</p>
-        </div>
-        <a href="https://ricarodz.github.io/RicaRodzPortafolio/resume/Ricardo_Rodriguez.pdf" class="download-cv" target="_blank" data-animate-el>Download Resume</a>
-    </section>
+        <section id="home" class="visible">
+            <div class="container">
+                <h1 class="name">Ricardo Rodriguez</h1>
+                <p class="title">Software Engineer</p>
 
-    <section id="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Languages</h3>
-                    <p>JavaScript, Python, C/C++, SQL, HTML/CSS</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Frameworks</h3>
-                    <p>React.js, React Native, Django, Flask</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Technologies</h3>
-                    <p>MongoDB, MySQL, GraphQL, Postgres, Git, REST APIs</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Tools</h3>
-                    <p>Docker, Jupyter, BeautifulSoup, Selenium</p>
-                </div>
             </div>
-        </div>
-    </section>
-
-    <section id="timeline" class="timeline-section">
-        <div class="timeline-container">
-            <div class="timeline-grid">
-                <div class="timeline-column">
-                    <h2>Experience</h2>
-                    <div class="timeline-wrapper">
-                        <div class="timeline-item">
-                            <div class="timeline-header">
-                                <div>
-                                    <h3 class="timeline-title">Artificial Intelligence Research Intern</h3>
-                                    <h4 class="timeline-subtitle">Union College of Union County</h4>
-                                </div>
-                                <span class="timeline-date">May 2023 - August 2023</span>
-                            </div>
-                            <div class="timeline-content">
-                                <ul>
-                                    <p>Conducted AI research to develop a chatbot with enhanced query-handling capabilities, leveraging web scraping tools to expand the knowledge base and implementing a responsive UI to boost user engagement.</p>
-                                </ul>
-                            </div>
-                        </div>
+        </section>
     
-                        <div class="timeline-item">
-                            <div class="timeline-header">
-                                <div>
-                                    <h3 class="timeline-title">Frontend Developer Research Intern</h3>
-                                    <h4 class="timeline-subtitle">Union College of Union County</h4>
-                                </div>
-                                <span class="timeline-date">May 2022 - September 2022</span>
-                            </div>
-                            <div class="timeline-content">
-                                <ul>
-                                    <p>Designed and implemented a scheduling dashboard using modern web technologies, improving efficiency and reducing conflicts through real-time data management and a user-friendly interface.</p>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="timeline-column">
-                    <h2>Education</h2>
-                    <div class="timeline-wrapper">
-                        <div class="timeline-item">
-                            <div class="timeline-header">
-                                <div>
-                                    <h3 class="timeline-title">New Jersey Institute of Technology</h3>
-                                    <h4 class="timeline-subtitle">Bachelor of Science, Computer Science</h4>
-                                </div>
-                                <span class="timeline-date">Expected December 2025</span>
-                            </div>
-                            <div class="timeline-content">
-                                <p>Gained a solid foundation in advanced topics such as data management, AI, data science, and computer networks. Developed skills in Android app development and mastered complex algorithms and data structures for efficient problem-solving.</p>
-                            </div>
-                        </div>
-    
-                        <div class="timeline-item">
-                            <div class="timeline-header">
-                                <div>
-                                    <h3 class="timeline-title">Union College of Union County</h3>
-                                    <h4 class="timeline-subtitle">Associates of Science, Computer Science</h4>
-                                </div>
-                                <span class="timeline-date">January 2021 - May 2023</span>
-                            </div>
-                            <div class="timeline-content">
-                                <p>Built a strong programming foundation in Java and Python, enhanced analytical skills through Discrete Mathematics, and explored mobile development with introductory iOS programming courses.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects">
-        <div class="container">
-            <h2>Recent Projects</h2>
+        <section id="projects">
+            <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-img"></div>
-                    <div class="project-info">
+                    <div class="project-content">
+                        <i class="fas fa-mobile-alt project-icon"></i>
                         <h3>Fitness App</h3>
-                        <p>A React Native application that optimized workout routines by 20% through data insights. Built with Python, GraphQL, and MongoDB for secure data handling.</p>
-                        <p class="tech-stack">Tech: React Native, Python, GraphQL, MongoDB</p>
+                        <p>React Native application that optimized workout routines by 20% through data insights.</p>
+                        <div class="project-tech">
+                            <span>React Native</span>
+                            <span>Python</span>
+                            <span>GraphQL</span>
+                        </div>
+                        
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-img"></div>
-                    <div class="project-info">
-                        <h3>Web Scraper</h3>
-                        <p>Developed a sophisticated web scraper using Python, BeautifulSoup, and Selenium to extract dynamic website data and handle real-time content loading.</p>
-                        <p class="tech-stack">Tech: Python, BeautifulSoup, Selenium</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-img"></div>
-                    <div class="project-info">
+                    <div class="project-content">
+                        <i class="fas fa-robot project-icon"></i>
                         <h3>AI Chatbot</h3>
-                        <p>Developed during my AI Research Internship, created a chatbot using Python, NLP, PostgreSQL and React, improving frontend engagement by 40%.</p>
-                        <p class="tech-stack">Tech: Python, NLP, PostgreSQL, React</p>
+                        <p>Developed a chatbot using Python, NLP, PostgreSQL and React, improving frontend engagement by 40%.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>NLP</span>
+                            <span>React</span>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <i class="fas fa-database project-icon"></i>
+                        <h3>RAG System</h3>
+                        <p>Built from scratch in Python, processing twin data pipelines for efficient knowledge retrieval.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>MongoDB</span>
+                            <span>Qdrant</span>
+                        </div>
+        
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-
-    <section id="contact">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <div class="contact-info">
-                <p>Email: rr764@njit.edu</p>
-                <p>Phone: (646) 897-5931</p>
-                <div class="social-links">
-                    <a href="https://github.com/RicaRodz" target="_blank">GitHub</a> |
-                    <a href="https://www.linkedin.com/in/ricardrodz/" target="_blank">LinkedIn</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
-        });
-
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const section = document.querySelector(this.getAttribute('href'));
-                section.scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-
-        document.querySelectorAll('.timeline-item').forEach(item => {
-            observer.observe(item);
-        });
-    </script>
+        </section>    
+    <script src="js/script.js"> </script>
 </body>
+
 </html>
