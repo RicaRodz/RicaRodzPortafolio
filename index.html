@@ -1,74 +1,175 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ricardo Rodriguez - Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Ricardo Rodriguez | Portfolio</title>
 </head>
-
 <body>
-    
-        <nav class="nav-bar">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-            </ul>
-        </nav>
-
-        <section id="home" class="visible">
-            <div class="container">
-                <h1 class="name">Ricardo Rodriguez</h1>
-                <p class="title">Software Engineer</p>
-
+  <header>
+    <div class="container">
+      <a href="#" class="logo">
+        <span data-letter="R">R</span><span data-letter="R">R</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <section id="home" class="hero">
+    <div class="container hero-content">
+      <h1>Hi, I'm <span class="gradient-text">Ricardo Rodriguez</span><br>Creative Developer</h1>
+      <p>I craft beautiful, functional websites and digital experiences that help brands stand out in the digital landscape.</p>
+      <a href="#portfolio" class="btn">View My Work</a>
+    </div>
+  </section>
+  
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-img">
+          <img src="/images/about-photo.jpg" alt="Ricardo Rodriguez">
+        </div>
+        <div class="about-text">
+          <h3>Creative thinker, strategic problem-solver.</h3>
+          <p>With over 5 years of experience in web development and design, I've helped numerous clients bring their digital vision to life. My approach combines technical expertise with creative problem-solving.</p>
+          <p>I specialize in creating responsive, user-friendly websites and applications that not only look great but also deliver results.</p>
+          <div class="skills">
+            <span class="skill-tag">HTML/CSS</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">UI/UX Design</span>
+            <span class="skill-tag">WordPress</span>
+            <span class="skill-tag">Node.js</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="portfolio" class="section">
+    <div class="container">
+      <h2 class="section-title">My Portfolio</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <div class="portfolio-img">Project Image 1</div>
+          <div class="portfolio-info">
+            <h3>E-commerce Website</h3>
+            <p>A full-featured online store with custom product filtering and seamless checkout experience.</p>
+            <div class="portfolio-tags">
+              <span class="portfolio-tag">React</span>
+              <span class="portfolio-tag">Node.js</span>
+              <span class="portfolio-tag">MongoDB</span>
             </div>
-        </section>
-    
-        <section id="projects">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-content">
-                        <i class="fas fa-mobile-alt project-icon"></i>
-                        <h3>Fitness App</h3>
-                        <p>React Native application that optimized workout routines by 20% through data insights.</p>
-                        <div class="project-tech">
-                            <span>React Native</span>
-                            <span>Python</span>
-                            <span>GraphQL</span>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-content">
-                        <i class="fas fa-robot project-icon"></i>
-                        <h3>AI Chatbot</h3>
-                        <p>Developed a chatbot using Python, NLP, PostgreSQL and React, improving frontend engagement by 40%.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>NLP</span>
-                            <span>React</span>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-content">
-                        <i class="fas fa-database project-icon"></i>
-                        <h3>RAG System</h3>
-                        <p>Built from scratch in Python, processing twin data pipelines for efficient knowledge retrieval.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>MongoDB</span>
-                            <span>Qdrant</span>
-                        </div>
+          </div>
+        </div>
         
-                    </div>
-                </div>
+        <div class="portfolio-item">
+          <div class="portfolio-img">Project Image 2</div>
+          <div class="portfolio-info">
+            <h3>Portfolio Website</h3>
+            <p>A clean, modern portfolio site for a photographer showcasing their work in an elegant gallery.</p>
+            <div class="portfolio-tags">
+              <span class="portfolio-tag">HTML/CSS</span>
+              <span class="portfolio-tag">JavaScript</span>
+              <span class="portfolio-tag">PHP</span>
             </div>
-        </section>    
-    <script src="js/script.js"> </script>
+          </div>
+        </div>
+        
+        <div class="portfolio-item">
+          <div class="portfolio-img">Project Image 3</div>
+          <div class="portfolio-info">
+            <h3>Mobile App UI</h3>
+            <p>User interface design for a fitness tracking mobile application with custom animations.</p>
+            <div class="portfolio-tags">
+              <span class="portfolio-tag">UI/UX</span>
+              <span class="portfolio-tag">Figma</span>
+              <span class="portfolio-tag">Prototyping</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">Contact Me</h2>
+      <div class="contact-container">
+        <div class="contact-info">
+          <p>I'm always interested in hearing about new projects and opportunities. Feel free to get in touch with me using the contact form or through my social media profiles.</p>
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div>
+              <h4>Email</h4>
+              <p>hello@ricardorodriguez.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📱</div>
+            <div>
+              <h4>Phone</h4>
+              <p>+1 (555) 123-4567</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h4>Location</h4>
+              <p>San Francisco, CA</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <form>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" class="form-input" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="container">
+      <div class="logo">
+        <span data-letter="R">R</span><span data-letter="R">R</span>
+      </div>
+      <div class="social-links">
+        <a href="#"><span>FB</span></a>
+        <a href="#"><span>TW</span></a>
+        <a href="#"><span>IG</span></a>
+        <a href="#"><span>LI</span></a>
+        <a href="#"><span>GH</span></a>
+      </div>
+      <p>&copy; 2025 Ricardo Rodriguez. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
 </body>
-
 </html>
