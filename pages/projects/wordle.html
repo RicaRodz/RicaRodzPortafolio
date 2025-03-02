@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="../../css/projects.css">
+        <title>Wordle Game App | Ricardo Rodriguez Portfolio</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+              <a href="../../index.html" class="logo">
+                <div class="empty-circle">
+                  <span data-letter="R">R</span><span data-letter="R">R</span>
+                </div>
+              </a>
+              <nav>
+                <ul class="nav-links">
+                  <li><a href="../../index.html">Home</a></li>
+                  <li><a href="../about.html">About</a></li>
+                  <li><a href="../portfolio.html">Portfolio</a></li>
+                  <li><a href="../../index.html#contact">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </header>
+
+          <main class="project-showcase">
+            <div class="container">
+              <h1 class="project-title">Wordle-Like Game</h1>
+              <span class="project-date">February 2025</span>
+              
+              <div class="project-card">
+                <div class="project-description">
+                  <p>An Android game inspired by Wordle, developed using Jetpack Compose for a modern and responsive UI. The game features dynamic word-guessing mechanics, real-time state updates, and custom composable components to enhance the player experience.</p>
+                </div>
+                
+                <div class="tech-stack">
+                  <span class="tech-item">Kotlin</span>
+                  <span class="tech-item">Jetpack Compose</span>
+                  <span class="tech-item">Android Studio</span>
+                </div>
+                
+                <div class="project-images">
+                  <div class="image-container">
+                    <img src="../../images/projects/wordle_demo.gif">
+                  </div>
+                </div>
+                
+                <!-- <a href="https://github.com/RicaRodz/your-wordle-repo" target="_blank" class="github-link">
+                  <i class="fab fa-github"></i> View on GitHub
+                </a> -->
+              </div>
+              
+              <a href="../portfolio.html" class="back-to-projects">
+                <i class="fas fa-arrow-left"></i> Back to Projects
+              </a>
+            </div>
+          </main>
+          
+        <footer>
+            <div class="container">
+                <div class="logo">
+                    <a href="../../index.html" class="logo">
+                        <div class="empty-circle">
+                            <span data-letter="R">R</span><span
+                                data-letter="R">R</span>
+                        </div>
+                    </a>
+                </div>
+                <p>&copy; 2025 Ricardo Rodriguez. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script>
+  // Header scroll effect
+  window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+</script>
+    </body>
+</html>

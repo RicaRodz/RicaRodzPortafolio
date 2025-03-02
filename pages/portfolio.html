@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/portfolio.css" />
+    <title>My Portfolio Projects</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="../index.html" class="logo">
+          <div class="empty-circle">
+            <span data-letter="R">R</span><span data-letter="R">R</span>
+          </div>
+        </a>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="portfolio" class="section">
+      <div class="container">
+        <div class="portfolio-section">
+          <div class="portfolio-header">
+            <h2 class="section-title">My Portfolio</h2>
+          </div>
+        </div>
+
+        <div class="portfolio-grid">
+
+          <!-- Wordle Game -->
+          <a
+            href="projects/wordle.html"
+            class="portfolio-link"
+          >
+            <div class="portfolio-item">
+              <div
+                class="portfolio-img"
+                style="background-image: url('../images/projects/wordle_demo.gif')"
+              ></div>
+              <div class="portfolio-info">
+                <h3>Wordle-Like Game</h3>
+                <p>
+                  A Wordle-inspired Android game with modern UI experience,
+                  dynamic game board, and real-time state updates.
+                </p>
+                <div class="portfolio-tags">
+                  <span class="portfolio-tag">Android</span>
+                  <span class="portfolio-tag">Kotlin</span>
+                  <span class="portfolio-tag">Jetpack Compose</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Workout App Project -->
+          <a
+            href="projects/workoutApp.html"
+            class="portfolio-link"
+          >
+            <div class="portfolio-item">
+              <div
+                class="portfolio-img"
+                style="background-image: url('../images/projects/workoutApp.png')"
+              ></div>
+              <div class="portfolio-info">
+                <h3>Fitness App</h3>
+                <p>
+                  A cross-platform fitness application with personalized workout
+                  planning and tracking, utilizing third-party APIs.
+                </p>
+                <div class="portfolio-tags">
+                  <span class="portfolio-tag">React Native</span>
+                  <span class="portfolio-tag">GraphQL</span>
+                  <span class="portfolio-tag">MongoDB</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- RAG Project -->
+          <a
+            href="projects/rag.html"
+            class="portfolio-link"
+          >
+            <div class="portfolio-item">
+              <div
+                class="portfolio-img"
+                style="background-image: url('../images/projects/RAG-Logo.jpeg')"
+              ></div>
+              <div class="portfolio-info">
+                <h3>RAG System</h3>
+                <p>
+                  A Retrieval-Augmented Generation system with data pipelines
+                  for extraction, transformation, and embedding.
+                </p>
+                <div class="portfolio-tags">
+                  <span class="portfolio-tag">Python</span>
+                  <span class="portfolio-tag">Qdrant</span>
+                  <span class="portfolio-tag">MongoDB</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="logo">
+          <a href="../index.html" class="logo">
+            <div class="empty-circle">
+              <span data-letter="R">R</span><span data-letter="R">R</span>
+            </div>
+          </a>
+        </div>
+        <div class="social-links">
+          <a
+            href="https://github.com/ricarodz"
+            target="_blank"
+            class="social-icon"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/ricardrodz/"
+            target="_blank"
+            class="social-icon"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+        <p>&copy; 2025 Ricardo Rodriguez. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Simple script to make filter buttons interactive
+      document.addEventListener("DOMContentLoaded", function () {
+        const filterBtns = document.querySelectorAll(".filter-btn");
+
+        filterBtns.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            // Remove active class from all buttons
+            filterBtns.forEach((b) => b.classList.remove("active"));
+
+            // Add active class to clicked button
+            this.classList.add("active");
+
+            // Add filter functionality here
+            // For demo purposes, just changing the buttons
+          });
+        });
+
+        // For demo purposes - animating items in without needing to scroll
+        setTimeout(() => {
+          document.querySelector("#portfolio").classList.add("in-view");
+        }, 300);
+      });
+    </script>
+  </body>
+</html>

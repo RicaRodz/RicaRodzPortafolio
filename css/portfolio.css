@@ -300,6 +300,7 @@ header .container {
 .section-title {
   font-size: 42px;
   margin-bottom: 20px;
+  margin-top: 30px;
   position: relative;
   display: inline-block;
 }
@@ -387,6 +388,9 @@ header .container {
   transition: all 0.5s ease;
   position: relative;
   overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .portfolio-img::after {
@@ -506,59 +510,34 @@ header .container {
   }
 }
 
-/* Filter Controls */
-.filter-controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 30px;
-}
 
-.filter-btn {
-  padding: 8px 16px;
-  background-color: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 20px;
-  color: #999;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.filter-btn:hover,
-.filter-btn.active {
-  background: var(--primary-gradient);
-  color: white;
-  border-color: transparent;
-}
-
-/* Search Bar */
-.search-bar {
-  margin-bottom: 30px;
+/* Footer */
+footer {
+  background-color: var(--accent-color);
+  color: #aaa;
+  padding: 40px 0;
+  text-align: center;
   position: relative;
+  overflow: hidden;
 }
 
-.search-input {
-  width: 100%;
-  padding: 12px 20px;
-  padding-left: 45px;
-  background-color: var(--input-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 30px;
-  color: var(--text-color);
-  font-size: 16px;
-  transition: all 0.3s ease;
-}
-
-.search-input:focus {
-  outline: none;
-  border-color: #555;
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
-}
-
-.search-icon {
+footer::before {
+  content: "";
   position: absolute;
-  left: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #777;
+  width: 200%;
+  height: 100%;
+  top: 0;
+  left: -50%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(79, 172, 254, 0.1),
+    transparent
+  );
+  transform: skewX(-30deg);
+  animation: gradient 10s linear infinite;
+}
+
+footer .logo {
+  animation: float 3s ease-in-out infinite;
 }

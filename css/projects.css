@@ -303,6 +303,7 @@ header .container {
   font-size: 3rem;
   font-weight: 800;
   margin-bottom: 1rem;
+  margin-top: 5rem;
   background: var(--primary-gradient);
   background-clip: text;
   -webkit-background-clip: text;
@@ -319,7 +320,6 @@ header .container {
 }
 
 .project-description {
-  max-width: 800px;
   margin: 0 auto 2rem;
   font-size: 1.1rem;
   line-height: 1.7;
@@ -374,6 +374,7 @@ header .container {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  justify-self: center;
 }
 
 .image-container img,
@@ -434,4 +435,35 @@ header .container {
   .project-images {
     grid-template-columns: 1fr;
   }
+}
+
+/* Footer */
+footer {
+  background-color: var(--accent-color);
+  color: #aaa;
+  padding: 40px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  top: 0;
+  left: -50%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(79, 172, 254, 0.1),
+    transparent
+  );
+  transform: skewX(-30deg);
+  animation: gradient 10s linear infinite;
+}
+
+footer .logo {
+  animation: float 3s ease-in-out infinite;
 }
