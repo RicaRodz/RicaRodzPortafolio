@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/styles.css" />
 
     <title>Ricardo Rodriguez | Portfolio</title>
@@ -11,7 +14,7 @@
   <body>
     <header>
       <div class="container">
-        <a href="#" class="logo">
+        <a href="../index.html" class="logo">
           <div class="empty-circle">
             <span data-letter="R">R</span><span data-letter="R">R</span>
           </div>
@@ -20,7 +23,7 @@
           <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="pages/about.html">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="pages/projects.html">Portfolio</a></li>
             <li><a href="pages/contact.html">Contact</a></li>
           </ul>
         </nav>
@@ -28,24 +31,32 @@
     </header>
 
     <section id="home" class="hero">
-        <div class="container hero-content">
-          <h1>
-            <span class="gradient-text">Ricardo Rodriguez </span><br />Software
-            Engineer
-          </h1>
-          <a href="#portfolio" class="btn">View My Work</a>
-          
-          <!-- Social Media Icons -->
-          <div class="social-icons">
-            <a href="https://github.com/yourusername" target="_blank" class="social-icon">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/yourusername/" target="_blank" class="social-icon">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </div>
+      <div class="container hero-content">
+        <h1>
+          <span class="gradient-text">Ricardo Rodriguez </span><br />Software
+          Engineer
+        </h1>
+        <a href="#portfolio" class="btn">View My Work</a>
+
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+          <a
+            href="https://github.com/ricarodz"
+            target="_blank"
+            class="social-icon"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/ricardrodz/"
+            target="_blank"
+            class="social-icon"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
         </div>
-      </section>
+      </div>
+    </section>
 
     <section id="about" class="section">
       <div class="container">
@@ -81,63 +92,88 @@
     <section id="portfolio" class="section">
       <div class="container">
         <div class="portfolio-section">
-            <div class="portfolio-header">
-              <h2 class="section-title">My Portfolio</h2>
-              <a href="pages/projects.html" class="btn portfolio-link">
-                View My Work
-              </a>
-            </div>
-          </div>
-          
-        <div class="portfolio-grid">
-          <div class="portfolio-item">
-            <div class="portfolio-img">Project Image 1</div>
-            <div class="portfolio-info">
-              <h3>Wordle-Like Game</h3>
-              <p>
-                A Wordle-inspired Android game with modern UI experience,
-                dynamic game board, and real-time state updates.
-              </p>
-              <div class="portfolio-tags">
-                <span class="portfolio-tag">Android</span>
-                <span class="portfolio-tag">Kotlin</span>
-                <span class="portfolio-tag">Jetpack Compose</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="portfolio-item">
-            <div class="portfolio-img">Project Image 2</div>
-            <div class="portfolio-info">
-              <h3>Fitness App</h3>
-              <p>
-                A cross-platform fitness application with personalized workout
-                planning and tracking, utilizing third-party APIs.
-              </p>
-              <div class="portfolio-tags">
-                <span class="portfolio-tag">React Native</span>
-                <span class="portfolio-tag">GraphQL</span>
-                <span class="portfolio-tag">MongoDB</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="portfolio-item">
-            <div class="portfolio-img">Project Image 3</div>
-            <div class="portfolio-info">
-              <h3>RAG System</h3>
-              <p>
-                A Retrieval-Augmented Generation system with data pipelines for
-                extraction, transformation, and embedding.
-              </p>
-              <div class="portfolio-tags">
-                <span class="portfolio-tag">Python</span>
-                <span class="portfolio-tag">Qdrant</span>
-                <span class="portfolio-tag">MongoDB</span>
-              </div>
-            </div>
+          <div class="portfolio-header">
+            <h2 class="section-title">My Portfolio</h2>
           </div>
         </div>
+
+        <div class="portfolio-grid">
+          <a
+            href="pages/projects/wordle.html"
+            target="_blank"
+            class="portfolio-link"
+          >
+            <div class="portfolio-item">
+              <div
+                class="portfolio-img"
+                style="background-image: url('images/projects/wordle_demo.gif')"
+              ></div>
+              <div class="portfolio-info">
+                <h3>Wordle-Like Game</h3>
+                <p>
+                  A Wordle-inspired Android game with modern UI experience,
+                  dynamic game board, and real-time state updates.
+                </p>
+                <div class="portfolio-tags">
+                  <span class="portfolio-tag">Android</span>
+                  <span class="portfolio-tag">Kotlin</span>
+                  <span class="portfolio-tag">Jetpack Compose</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="pages/projects/workoutApp.html"
+            target="_blank"
+            class="portfolio-link"
+          >
+            <div class="portfolio-item">
+              <div
+                class="portfolio-img"
+                style="background-image: url('images/projects/workoutApp.png')"
+              ></div>
+              <div class="portfolio-info">
+                <h3>Fitness App</h3>
+                <p>
+                  A cross-platform fitness application with personalized workout
+                  planning and tracking, utilizing third-party APIs.
+                </p>
+                <div class="portfolio-tags">
+                  <span class="portfolio-tag">React Native</span>
+                  <span class="portfolio-tag">GraphQL</span>
+                  <span class="portfolio-tag">MongoDB</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="pages/projects/rag.html"
+            target="_blank"
+            class="portfolio-link"
+          >
+            <div class="portfolio-item">
+              <div
+                class="portfolio-img"
+                style="background-image: url('images/projects/RAG-Logo.jpeg')"
+              ></div>
+              <div class="portfolio-info">
+                <h3>RAG System</h3>
+                <p>
+                  A Retrieval-Augmented Generation system with data pipelines
+                  for extraction, transformation, and embedding.
+                </p>
+                <div class="portfolio-tags">
+                  <span class="portfolio-tag">Python</span>
+                  <span class="portfolio-tag">Qdrant</span>
+                  <span class="portfolio-tag">MongoDB</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <a href="pages/projects.html" class="btn portfolio-link"> See More </a>
       </div>
     </section>
 
@@ -155,44 +191,69 @@
               <div class="contact-icon">📧</div>
               <div>
                 <h4>Email</h4>
-                <p>hello@ricardorodriguez.com</p>
+                <p>ricardo.rodriguez252002@gmail.com</p>
               </div>
             </div>
             <div class="contact-item">
               <div class="contact-icon">📱</div>
               <div>
                 <h4>Phone</h4>
-                <p>+1 (555) 123-4567</p>
+                <p>+1 (646) 897-5931</p>
               </div>
             </div>
             <div class="contact-item">
               <div class="contact-icon">📍</div>
               <div>
                 <h4>Location</h4>
-                <p>San Francisco, CA</p>
+                <p>New Providence, NJ</p>
               </div>
             </div>
           </div>
 
           <div class="contact-form">
-            <form>
+            <form action="https://formspree.io/f/manqrbbz" method="POST">
               <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" id="name" class="form-input" required />
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-input"
+                  required
+                />
               </div>
               <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" class="form-input" required />
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  required
+                />
               </div>
               <div class="form-group">
                 <label for="subject">Subject</label>
-                <input type="text" id="subject" class="form-input" required />
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  class="form-input"
+                  required
+                />
               </div>
               <div class="form-group">
                 <label for="message">Message</label>
-                <textarea id="message" class="form-input" required></textarea>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form-input"
+                  required
+                ></textarea>
               </div>
-              <button type="submit" class="btn">Send Message</button>
+              <button type="submit" class="btn">
+                <span>Send Message</span>
+              </button>
             </form>
           </div>
         </div>
@@ -202,14 +263,27 @@
     <footer>
       <div class="container">
         <div class="logo">
-          <span data-letter="R">R</span><span data-letter="R">R</span>
+          <a href="#home" class="logo">
+            <div class="empty-circle">
+              <span data-letter="R">R</span><span data-letter="R">R</span>
+            </div>
+          </a>
         </div>
         <div class="social-links">
-          <a href="#"><span>FB</span></a>
-          <a href="#"><span>TW</span></a>
-          <a href="#"><span>IG</span></a>
-          <a href="#"><span>LI</span></a>
-          <a href="#"><span>GH</span></a>
+          <a
+            href="https://github.com/ricarodz"
+            target="_blank"
+            class="social-icon"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/ricardrodz/"
+            target="_blank"
+            class="social-icon"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
         </div>
         <p>&copy; 2025 Ricardo Rodriguez. All rights reserved.</p>
       </div>

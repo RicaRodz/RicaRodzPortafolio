@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="../../css/projects.css">
+  <title>Project Name | Ricardo Rodriguez Portfolio</title>
+</head>
+<body>
+<header>
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <div class="empty-circle">
+        <span data-letter="R">R</span><span data-letter="R">R</span>
+      </div>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pages/about.html">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="project-showcase">
+  <div class="container">
+    <h1 class="project-title">Project Title</h1>
+    <span class="project-date">January 2025</span>
+    
+    <div class="project-card">
+      <div class="project-description">
+        <p>A concise description of the project. What it does, why you built it, and what problem it solves. This should be brief but informative, giving visitors a clear understanding of the project's purpose and value.</p>
+      </div>
+      
+      <div class="tech-stack">
+        <span class="tech-item">HTML5</span>
+        <span class="tech-item">CSS3</span>
+        <span class="tech-item">JavaScript</span>
+        <span class="tech-item">React</span>
+        <span class="tech-item">Node.js</span>
+        <!-- Add or remove tech items as needed -->
+      </div>
+      
+      <div class="project-images">
+        <div class="image-container">
+          <img src="/api/placeholder/600/400" alt="Project Screenshot 1">
+        </div>
+        <div class="image-container">
+          <img src="/api/placeholder/600/400" alt="Project Screenshot 2">
+        </div>
+        <!-- For GIF, you can use either img or video tag -->
+        <div class="image-container">
+          <img src="/api/placeholder/600/400" alt="Project Demo GIF">
+          <!-- Alternative for actual gif:
+          <video autoplay loop muted playsinline>
+            <source src="path/to/your/demo.mp4" type="video/mp4">
+          </video> 
+          -->
+        </div>
+      </div>
+      
+      <a href="https://github.com/yourusername/your-repo" target="_blank" class="github-link">
+        <i class="fab fa-github"></i> View on GitHub
+      </a>
+    </div>
+    
+    <a href="#portfolio" class="back-to-projects">
+      <i class="fas fa-arrow-left"></i> Back to Projects
+    </a>
+  </div>
+</main>
+
+<script>
+  // Header scroll effect
+  window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+</script>
+</body>
+</html>

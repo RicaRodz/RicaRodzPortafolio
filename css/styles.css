@@ -9,8 +9,13 @@
   --card-bg: #1e1e1e;
   --border-color: #333;
   --input-bg: #2a2a2a;
-  --text-highlight: #ff7e4b;
+  --orange: #ff7e4b;
+  --blue: #24ced1;
   --animation-timing: 0.3s;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 * {
@@ -271,7 +276,7 @@ header .container {
 }
 
 .nav-links a:hover {
-  color: var(--text-highlight);
+  color: var(--orange);
 }
 
 .nav-links a::after {
@@ -398,7 +403,7 @@ header .container {
 }
 
 .social-icon:hover {
-  color: var(--text-highlight); /* LinkedIn blue on hover */
+  color: var(--blue); /* LinkedIn blue on hover */
 }
 
 /* About Section */
@@ -605,6 +610,9 @@ header .container {
   transition: all 0.5s ease;
   position: relative;
   overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .portfolio-img::after {
@@ -627,6 +635,7 @@ header .container {
 .portfolio-item:hover .portfolio-img::after {
   opacity: 1;
 }
+
 
 .portfolio-info {
   padding: 20px;
@@ -678,10 +687,11 @@ header .container {
 }
 
 .section-title {
-  margin: 0;
+  margin: 10;
 }
 
 .btn.portfolio-link {
+    margin-top: 2em;
   display: inline-block;
   padding: 12px 24px;
   font-size: 16px;
@@ -696,7 +706,7 @@ header .container {
 }
 
 .btn.portfolio-link:hover {
-  background: var(--accent-color-dark);
+  background: var(--primary-gradient);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
   transform: translateY(-2px);
 }
