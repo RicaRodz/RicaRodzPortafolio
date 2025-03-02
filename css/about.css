@@ -297,8 +297,9 @@ header .container {
 }
 
 .section-title {
-  font-size: 42px;
+  font-size: 4em;
   margin-bottom: 20px;
+  margin-top: 30px;
   position: relative;
   display: inline-block;
 }
@@ -791,7 +792,7 @@ textarea.form-control {
 }
 
 .tab-button.active {
-  color: #fff;
+  color: var(--text-highlight);
 }
 
 .tab-button.active::after {
@@ -842,3 +843,4 @@ textarea.form-control {
     transform: translateY(0);
   }
 }
+
