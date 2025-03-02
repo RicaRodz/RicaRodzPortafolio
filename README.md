@@ -1,2 +1,2 @@
-# RicaRodzPortafolio
-Web Portafolio
+# RicaRodzPortfolio
+Web Portfolio
