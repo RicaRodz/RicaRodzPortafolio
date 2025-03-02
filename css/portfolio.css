@@ -417,13 +417,11 @@ header .container {
 .portfolio-info {
   padding: 20px;
   transform: translateY(10px);
-  opacity: 0;
   transition: all 0.5s ease 0.2s;
 }
 
 .portfolio-item:hover .portfolio-info {
   transform: translateY(0);
-  opacity: 1;
 }
 
 .portfolio-info h3 {
