@@ -3,291 +3,267 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
-    <link rel="stylesheet" href="css/styles.css" />
-
-    <title>Ricardo Rodriguez | Portfolio</title>
+    <title>Ricardo Rodriguez Sanchez - Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <header>
-      <div class="container">
-        <a href="index.html" class="logo">
-          <div class="empty-circle">
-            <span data-letter="R">R</span><span data-letter="R">R</span>
-          </div>
-        </a>
-        <nav>
-          <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="pages/about.html">About</a></li>
-            <li><a href="pages/portfolio.html">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+  <body data-theme="dark">
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" id="themeToggle">
+      <span class="theme-icon">🌙</span>
+      <span class="theme-text">Dark</span>
+    </div>
 
-    <section id="home" class="hero">
-      <div class="container hero-content">
-        <h1>
-          <span class="gradient-text">Ricardo Rodriguez </span><br />Software
-          Engineer
-        </h1>
-        <a href="#portfolio" class="btn">View My Work</a>
+    <!-- Animated Stars Background - Full Screen -->
+    <div class="stars-container" id="starsContainer"></div>
 
-        <!-- Social Media Icons -->
-        <div class="social-icons">
+    <div class="portfolio-container">
+      <!-- Left Panel - Static with Glassmorphism -->
+      <div class="left-panel">
+        <h1 class="name-title">Ricardo Rodriguez Sanchez</h1>
+        <p class="job-title">iOS/Android Engineer</p>
+
+        <div class="contact-buttons">
           <a
-            href="https://github.com/ricarodz"
+            href="https://github.com/RicaRodz?tab=repositories"
             target="_blank"
-            class="social-icon"
+            class="btn btn-github"
           >
-            <i class="fab fa-github"></i>
+            GitHub Profile
           </a>
           <a
             href="https://www.linkedin.com/in/ricardrodz/"
             target="_blank"
-            class="social-icon"
+            class="btn btn-linkedin"
           >
-            <i class="fab fa-linkedin"></i>
+            LinkedIn Profile
           </a>
         </div>
       </div>
-    </section>
 
-    <section id="about" class="section">
-      <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-          <div class="about-img">
-            <img src="images/about-photo.jpg" alt="Ricardo Rodriguez" />
-          </div>
-          <div class="about-text">
-            <h3>Mobile developer, AI enthusiast, problem-solver.</h3>
-            <p>
-              I am a Computer Science student at NJIT with a passion for mobile
-              development and AI integration. Through my internships and
-              projects, I've built a diverse skill set that combines technical
-              expertise with creative problem-solving. I specialize in creating
-              intuitive, user-friendly mobile applications for both Android and
-              iOS platforms, with a focus on performance optimization and
-              seamless user experiences.
-            </p>
-            <div class="skills">
-              <span class="skill-tag">Swift</span>
-              <span class="skill-tag">Kotlin</span>
-              <span class="skill-tag">React Native</span>
-              <span class="skill-tag">Python</span>
-              <span class="skill-tag">MongoDB</span>
-              <span class="skill-tag">AI Agents</span>
+      <!-- Right Panel - Scrollable Projects -->
+      <div class="right-panel">
+        <h2 class="projects-header">Featured Projects & Experiences</h2>
+
+        <div class="projects-list">
+          <!-- Project 1: Wordle-Like Game -->
+          <div class="project-card" data-project="1">
+            <div class="project-header">
+              <div class="project-title">
+                Wordle-Like Game
+                <div class="expand-icon">▼</div>
+              </div>
+              <p class="project-preview">
+                Android game mimicking Wordle with custom Jetpack Compose UI and
+                real-time updates.
+              </p>
+              <div class="project-tech-preview">
+                <span class="tech-tag-preview">Kotlin</span>
+                <span class="tech-tag-preview">Jetpack Compose</span>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="portfolio" class="section">
-      <div class="container">
-        <div class="portfolio-section">
-          <div class="portfolio-header">
-            <h2 class="section-title">My Portfolio</h2>
-          </div>
-        </div>
-
-        <div class="portfolio-grid">
-          <a
-            href="pages/projects/wordle.html"
-            target="_blank"
-            class="portfolio-link"
-          >
-            <div class="portfolio-item">
-              <div
-                class="portfolio-img"
-                style="background-image: url('images/projects/wordle_demo.gif')"
-              ></div>
-              <div class="portfolio-info">
-                <h3>Wordle-Like Game</h3>
-                <p>
-                  A Wordle-inspired Android game with modern UI experience,
-                  dynamic game board, and real-time state updates.
+            <div class="project-content">
+              <div class="project-details">
+                <div class="project-meta">
+                  <div class="meta-item">
+                    <span class="meta-label">Status</span>
+                    <span class="meta-value status-completed">Completed</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Date</span>
+                    <span class="meta-value">February 2025</span>
+                  </div>
+                </div>
+                <p class="project-description-full">
+                  Developed a Wordle-inspired Android game using Jetpack
+                  Compose. Designed a dynamic UI with reusable composables,
+                  handled real-time game state, and ensured smooth user input
+                  interaction.
                 </p>
-                <div class="portfolio-tags">
-                  <span class="portfolio-tag">Android</span>
-                  <span class="portfolio-tag">Kotlin</span>
-                  <span class="portfolio-tag">Jetpack Compose</span>
+                <div class="project-tech-full">
+                  <span class="tech-tag-full">Kotlin</span>
+                  <span class="tech-tag-full">Jetpack Compose</span>
                 </div>
               </div>
             </div>
-          </a>
+          </div>
 
-          <a
-            href="pages/projects/workoutApp.html"
-            target="_blank"
-            class="portfolio-link"
-          >
-            <div class="portfolio-item">
-              <div
-                class="portfolio-img"
-                style="background-image: url('images/projects/workoutApp.png')"
-              ></div>
-              <div class="portfolio-info">
-                <h3>Fitness App</h3>
-                <p>
-                  A cross-platform fitness application with personalized workout
-                  planning and tracking, utilizing third-party APIs.
-                </p>
-                <div class="portfolio-tags">
-                  <span class="portfolio-tag">React Native</span>
-                  <span class="portfolio-tag">GraphQL</span>
-                  <span class="portfolio-tag">MongoDB</span>
+          <!-- Project 2: RAG System -->
+          <div class="project-card" data-project="2">
+            <div class="project-header">
+              <div class="project-title">
+                Retrieval-Augmented Generation (RAG) System
+                <div class="expand-icon">▼</div>
+              </div>
+              <p class="project-preview">
+                Context-aware response generation using Qdrant, Python, and
+                MongoDB.
+              </p>
+              <div class="project-tech-preview">
+                <span class="tech-tag-preview">Python</span>
+                <span class="tech-tag-preview">Qdrant</span>
+                <span class="tech-tag-preview">MongoDB</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-details">
+                <div class="project-meta">
+                  <div class="meta-item">
+                    <span class="meta-label">Status</span>
+                    <span class="meta-value status-completed">Completed</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Date</span>
+                    <span class="meta-value">November 2024</span>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </a>
-
-          <a
-            href="pages/projects/rag.html"
-            target="_blank"
-            class="portfolio-link"
-          >
-            <div class="portfolio-item">
-              <div
-                class="portfolio-img"
-                style="background-image: url('images/projects/RAG-Logo.jpeg')"
-              ></div>
-              <div class="portfolio-info">
-                <h3>RAG System</h3>
-                <p>
-                  A Retrieval-Augmented Generation system with data pipelines
-                  for extraction, transformation, and embedding.
+                <p class="project-description-full">
+                  Built a RAG system in Python using data pipelines for
+                  embedding, transformation, and chunking. Integrated Qdrant and
+                  MongoDB for fast vector search and context-aware answer
+                  generation.
                 </p>
-                <div class="portfolio-tags">
-                  <span class="portfolio-tag">Python</span>
-                  <span class="portfolio-tag">Qdrant</span>
-                  <span class="portfolio-tag">MongoDB</span>
+                <div class="project-tech-full">
+                  <span class="tech-tag-full">Python</span>
+                  <span class="tech-tag-full">Qdrant</span>
+                  <span class="tech-tag-full">MongoDB</span>
                 </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <a href="pages/portfolio.html" class="btn portfolio-link"> See More </a>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="container">
-        <h2 class="section-title">Contact Me</h2>
-        <div class="contact-container">
-          <div class="contact-info">
-            <p>
-              I'm always interested in hearing about new projects and
-              opportunities. Feel free to get in touch with me using the contact
-              form or through my social media profiles.
-            </p>
-            <div class="contact-item">
-              <div class="contact-icon">📧</div>
-              <div>
-                <h4>Email</h4>
-                <p>ricardo.rodriguez252002@gmail.com</p>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-icon">📱</div>
-              <div>
-                <h4>Phone</h4>
-                <p>+1 (646) 897-5931</p>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-icon">📍</div>
-              <div>
-                <h4>Location</h4>
-                <p>New Providence, NJ</p>
               </div>
             </div>
           </div>
 
-          <div class="contact-form">
-            <form action="https://formspree.io/f/manqrbbz" method="POST">
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  class="form-input"
-                  required
-                />
+          <!-- Project 3: Fitness App -->
+          <div class="project-card" data-project="3">
+            <div class="project-header">
+              <div class="project-title">
+                Fitness App
+                <div class="expand-icon">▼</div>
               </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  class="form-input"
-                  required
-                />
+              <p class="project-preview">
+                Workout planner and exercise tracker with personalized routines.
+              </p>
+              <div class="project-tech-preview">
+                <span class="tech-tag-preview">React Native</span>
+                <span class="tech-tag-preview">Python</span>
+                <span class="tech-tag-preview">MongoDB</span>
               </div>
-              <div class="form-group">
-                <label for="subject">Subject</label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  class="form-input"
-                  required
-                />
+            </div>
+            <div class="project-content">
+              <div class="project-details">
+                <div class="project-meta">
+                  <div class="meta-item">
+                    <span class="meta-label">Status</span>
+                    <span class="meta-value status-completed">Completed</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Date</span>
+                    <span class="meta-value">July 2024</span>
+                  </div>
+                </div>
+                <p class="project-description-full">
+                  Developed a fitness app using React Native and Python.
+                  Implemented GraphQL APIs and third-party integrations for
+                  exercise libraries. Personalized workout tracking and user
+                  analytics were core features.
+                </p>
+                <div class="project-tech-full">
+                  <span class="tech-tag-full">React Native</span>
+                  <span class="tech-tag-full">Python</span>
+                  <span class="tech-tag-full">MongoDB</span>
+                  <span class="tech-tag-full">GraphQL</span>
+                </div>
               </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  class="form-input"
-                  required
-                ></textarea>
+            </div>
+          </div>
+
+          <!-- Experience 1: AI Research Intern -->
+          <div class="project-card" data-project="4">
+            <div class="project-header">
+              <div class="project-title">
+                AI Assistant Chatbot
+                <div class="expand-icon">▼</div>
               </div>
-              <button type="submit" class="btn">
-                <span>Send Message</span>
-              </button>
-            </form>
+              <p class="project-preview">
+                Created and maintained a chatbot with web scraping integration.
+              </p>
+              <div class="project-tech-preview">
+                <span class="tech-tag-preview">Python</span>
+                <span class="tech-tag-preview">Web Scraping</span>
+                <span class="tech-tag-preview">Chatbot</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-details">
+                <div class="project-meta">
+                  <div class="meta-item">
+                    <span class="meta-label">Location</span>
+                    <span class="meta-value">Cranford, NJ</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Date</span>
+                    <span class="meta-value">May 2023 – August 2023</span>
+                  </div>
+                </div>
+                <p class="project-description-full">
+                  Spearheaded the development of an AI assistant chatbot. Built
+                  backend architecture for conversation storage and deployed web
+                  scrapers to enhance the knowledge base by 30%. Collaborated
+                  across departments to improve chatbot interaction design.
+                </p>
+                <div class="project-tech-full">
+                  <span class="tech-tag-full">Python</span>
+                  <span class="tech-tag-full">Web Scraping</span>
+                  <span class="tech-tag-full">MongoDB</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 2: Software Engineer Intern -->
+          <div class="project-card" data-project="5">
+            <div class="project-header">
+              <div class="project-title">
+                Full-Stack Scheduling Platform
+                <div class="expand-icon">▼</div>
+              </div>
+              <p class="project-preview">
+                Built a full-stack application using React, Django, and MongoDB.
+              </p>
+              <div class="project-tech-preview">
+                <span class="tech-tag-preview">React</span>
+                <span class="tech-tag-preview">Django</span>
+                <span class="tech-tag-preview">MongoDB</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-details">
+                <div class="project-meta">
+                  <div class="meta-item">
+                    <span class="meta-label">Location</span>
+                    <span class="meta-value">Cranford, NJ</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Date</span>
+                    <span class="meta-value">May 2022 – September 2022</span>
+                  </div>
+                </div>
+                <p class="project-description-full">
+                  Developed a full-stack web application to manage operations.
+                  Led backend and frontend tasks with Django and React,
+                  performed database optimizations, and enforced best coding
+                  practices through code reviews.
+                </p>
+                <div class="project-tech-full">
+                  <span class="tech-tag-full">React</span>
+                  <span class="tech-tag-full">Django</span>
+                  <span class="tech-tag-full">MongoDB</span>
+                  <span class="tech-tag-full">REST API</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
-
-    <footer>
-      <div class="container">
-        <div class="logo">
-          <a href="#home" class="logo">
-            <div class="empty-circle">
-              <span data-letter="R">R</span><span data-letter="R">R</span>
-            </div>
-          </a>
-        </div>
-        <div class="social-links">
-          <a
-            href="https://github.com/ricarodz"
-            target="_blank"
-            class="social-icon"
-          >
-            <i class="fab fa-github"></i>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/ricardrodz/"
-            target="_blank"
-            class="social-icon"
-          >
-            <i class="fab fa-linkedin"></i>
-          </a>
-        </div>
-        <p>&copy; 2025 Ricardo Rodriguez. All rights reserved.</p>
-      </div>
-    </footer>
-    <script src="js/script.js"></script>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
