@@ -1,32 +1,5 @@
 // Theme Toggle Functionality
-const themeToggle = document.getElementById("themeToggle");
-const themeIcon = themeToggle.querySelector(".theme-icon");
-const themeText = themeToggle.querySelector(".theme-text");
 const body = document.body;
-
-// Check for saved theme preference or default to 'dark'
-const currentTheme = localStorage.getItem("theme") || "dark";
-body.setAttribute("data-theme", currentTheme);
-updateThemeToggle(currentTheme);
-
-themeToggle.addEventListener("click", () => {
-  const currentTheme = body.getAttribute("data-theme");
-  const newTheme = currentTheme === "dark" ? "light" : "dark";
-
-  body.setAttribute("data-theme", newTheme);
-  localStorage.setItem("theme", newTheme);
-  updateThemeToggle(newTheme);
-});
-
-function updateThemeToggle(theme) {
-  if (theme === "dark") {
-    themeIcon.textContent = "🌙";
-    themeText.textContent = "Dark";
-  } else {
-    themeIcon.textContent = "☀️";
-    themeText.textContent = "Light";
-  }
-}
 
 // Generate Animated Stars
 function createStars() {
@@ -220,6 +193,122 @@ function initializeTypingAnimation() {
   setTimeout(typeWriter, 500);
 }
 
+// Toggle between Projects and Experience
+function initializeSectionToggle() {
+  const toggleButtons = document.querySelectorAll('.toggle-btn');
+  const sections = document.querySelectorAll('.projects-section');
+
+  toggleButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const targetSection = button.getAttribute('data-section');
+      
+      // Remove active class from all buttons and sections
+      toggleButtons.forEach(btn => btn.classList.remove('active'));
+      sections.forEach(section => section.classList.remove('active'));
+      
+      // Add active class to clicked button
+      button.classList.add('active');
+      
+      // Show target section
+      const targetElement = document.getElementById(`${targetSection}-section`);
+      if (targetElement) {
+        targetElement.classList.add('active');
+        
+        // Smooth scroll to top of right panel
+        const rightPanel = document.querySelector('.right-panel');
+        rightPanel.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+}
+
+// Media Preview Toggle Functionality
+function initializeMediaPreviews() {
+  const mediaToggleBtns = document.querySelectorAll('.media-toggle-btn');
+  const mediaImages = document.querySelectorAll('.media-image');
+
+  // Handle toggle buttons
+  mediaToggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const mediaContent = btn.closest('.media-preview-section').querySelector('.media-content');
+      const mediaText = btn.querySelector('.media-text');
+      const isActive = mediaContent.classList.contains('active');
+
+      if (isActive) {
+        mediaContent.classList.remove('active');
+        btn.classList.remove('active');
+        mediaText.textContent = 'Show Preview';
+      } else {
+        mediaContent.classList.add('active');
+        btn.classList.add('active');
+        mediaText.textContent = 'Hide Preview';
+      }
+    });
+  });
+
+  // Handle image clicks for modal view
+  mediaImages.forEach(img => {
+    img.addEventListener('click', () => {
+      openMediaModal(img.src, img.alt);
+    });
+  });
+
+  // Create modal if it doesn't exist
+  if (!document.querySelector('.media-modal')) {
+    createMediaModal();
+  }
+}
+
+// Create Media Modal
+function createMediaModal() {
+  const modal = document.createElement('div');
+  modal.className = 'media-modal';
+  modal.innerHTML = `
+    <button class="media-modal-close">&times;</button>
+    <img class="media-modal-content" src="" alt="">
+  `;
+
+  document.body.appendChild(modal);
+
+  // Close modal events
+  const closeBtn = modal.querySelector('.media-modal-close');
+  closeBtn.addEventListener('click', closeMediaModal);
+  
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeMediaModal();
+    }
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeMediaModal();
+    }
+  });
+}
+
+// Open Media Modal
+function openMediaModal(src, alt) {
+  const modal = document.querySelector('.media-modal');
+  const modalImg = modal.querySelector('.media-modal-content');
+  
+  modalImg.src = src;
+  modalImg.alt = alt;
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+// Close Media Modal
+function closeMediaModal() {
+  const modal = document.querySelector('.media-modal');
+  modal.classList.remove('active');
+  document.body.style.overflow = 'auto';
+}
+
 // Initialize all functionality when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
   createStars();
@@ -229,6 +318,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeHoverEffects();
   initializeParallax();
   initializeTypingAnimation();
+  initializeSectionToggle();
+  initializeMediaPreviews();
 });
 
 // Performance optimization: Throttle scroll events
