@@ -1,360 +1,488 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ricardo Rodriguez Sanchez - Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body data-theme="dark">
-    <!-- Animated Stars Background -->
-    <div class="stars-container" id="starsContainer"></div>
 
-    <div class="portfolio-container">
-      <!-- Left Panel -->
-      <div class="left-panel">
-        <h1 class="name-title">Ricardo Rodriguez Sanchez</h1>
-        <p class="job-title">Software Engineer</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ricardo Rodriguez Sanchez - Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-        <div class="contact-buttons">
-          <a
-            href="https://github.com/RicaRodz?tab=repositories"
-            target="_blank"
-            class="btn btn-github"
-          >
-            GitHub Profile
-          </a>
-          <a
-            href="https://www.linkedin.com/in/ricardrodz/"
-            target="_blank"
-            class="btn btn-linkedin"
-          >
-            LinkedIn Profile
-          </a>
+<body data-theme="dark">
+  <!-- Animated Stars Background -->
+  <div class="stars-container" id="starsContainer"></div>
+
+  <div class="portfolio-container">
+    <!-- Left Panel -->
+    <div class="left-panel">
+      <h1 class="name-title">Ricardo Rodriguez Sanchez</h1>
+      <p class="job-title">Software Engineer</p>
+
+      <div class="contact-buttons">
+        <a href="https://github.com/RicaRodz?tab=repositories" target="_blank" class="btn btn-github">
+          GitHub Profile
+        </a>
+        <a href="https://www.linkedin.com/in/ricardrodz/" target="_blank" class="btn btn-linkedin">
+          LinkedIn Profile
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Panel - Scrollable Projects -->
+    <div class="right-panel">
+      <div class="section-header">
+        <h2 class="section-title">My Work</h2>
+        <div class="toggle-container">
+          <button class="toggle-btn active" data-section="projects">
+            Projects
+          </button>
+          <button class="toggle-btn" data-section="experience">
+            Experience
+          </button>
         </div>
       </div>
 
-      <!-- Right Panel - Scrollable Projects -->
-      <div class="right-panel">
-        <div class="section-header">
-          <h2 class="section-title">My Work</h2>
-          <div class="toggle-container">
-            <button class="toggle-btn active" data-section="projects">
-              Projects
-            </button>
-            <button class="toggle-btn" data-section="experience">
-              Experience
-            </button>
-          </div>
-        </div>
+      <div class="projects-section active" id="projects-section">
+        <div class="projects-list">
 
-        <div class="projects-section active" id="projects-section">
-          <div class="projects-list">
-            <!-- PROJECT 1: Wordle-Like Game -->
-            <div class="project-card" data-project="1">
-              <div class="project-header">
-                <div class="project-title">
-                  Wordle-Like Game
-                  <div class="expand-icon">▼</div>
-                </div>
-                <p class="project-preview">
-                  Android game mimicking Wordle with custom Jetpack Compose UI
-                  and real-time updates.
-                </p>
-                <div class="project-tech-preview">
-                  <span class="tech-tag-preview">Kotlin</span>
-                  <span class="tech-tag-preview">Jetpack Compose</span>
-                </div>
+          <!-- PROJECT 1: Fitness App -->
+          <div class="project-card" data-project="1">
+            <div class="project-header">
+              <div class="project-title">
+                SmartFit – Fitness Tracker
+                <div class="expand-icon">▼</div>
               </div>
-              <div class="project-content">
-                <div class="project-details">
-                  <div class="project-meta">
-                    <div class="meta-item">
-                      <span class="meta-label">Status</span>
-                      <span class="meta-value status-completed">Completed</span>
-                    </div>
-                    <div class="meta-item">
-                      <span class="meta-label">Date</span>
-                      <span class="meta-value">February 2025</span>
-                    </div>
-                  </div>
-
-                  <p class="project-description-full">
-                    Developed a Wordle-inspired Android game using Jetpack
-                    Compose. Designed a dynamic UI with reusable composables,
-                    handled real-time game state, and ensured smooth user input
-                    interaction.
-                  </p>
-
-                  <!-- Preview Section -->
-                  <div class="media-preview-section">
-                    <div class="media-toggle">
-                      <button class="media-toggle-btn" data-project="1">
-                        <span class="media-text">Show Preview</span>
-                        <span class="expand-arrow">▼</span>
-                      </button>
-                    </div>
-                    <div class="media-content">
-                      <div class="media-gallery">
-                        <div class="media-item">
-                          <video
-                            src="images/projects/wordle_demo.mp4"
-                            autoplay
-                            muted
-                            loop
-                            playsinline
-                            class="media-video"
-                          ></video>
-                          <div class="media-caption">Live demo</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="project-tech-full">
-                    <span class="tech-tag-full">Kotlin</span>
-                    <span class="tech-tag-full">Jetpack Compose</span>
-                  </div>
-                </div>
+              <p class="project-preview">
+                Cross-platform fitness app with workout scheduling, hydration reminders, and macronutrient tracking.
+              </p>
+              <div class="project-tech-preview">
+                <span class="tech-tag-preview">React Native</span>
+                <span class="tech-tag-preview">TypeScript</span>
+                <span class="tech-tag-preview">Supabase</span>
               </div>
             </div>
-
-            <!-- PROJECT 2: RAG System -->
-            <div class="project-card" data-project="2">
-              <div class="project-header">
-                <div class="project-title">
-                  Retrieval-Augmented Generation (RAG) System
-                  <div class="expand-icon">▼</div>
-                </div>
-                <p class="project-preview">
-                  Context-aware response generation using Qdrant, Python, and
-                  MongoDB.
-                </p>
-                <div class="project-tech-preview">
-                  <span class="tech-tag-preview">Python</span>
-                  <span class="tech-tag-preview">Qdrant</span>
-                  <span class="tech-tag-preview">MongoDB</span>
-                </div>
-              </div>
-              <div class="project-content">
-                <div class="project-details">
-                  <div class="project-meta">
-                    <div class="meta-item">
-                      <span class="meta-label">Status</span>
-                      <span class="meta-value status-completed">Completed</span>
-                    </div>
-                    <div class="meta-item">
-                      <span class="meta-label">Date</span>
-                      <span class="meta-value">November 2024</span>
-                    </div>
+            <div class="project-content">
+              <div class="project-details">
+                <div class="project-meta">
+                  <div class="meta-item">
+                    <span class="meta-label">Status</span>
+                    <span class="meta-value status-completed">Completed</span>
                   </div>
-                  <p class="project-description-full">
-                    Built a RAG system in Python using data pipelines for
-                    embedding, transformation, and chunking. Integrated Qdrant
-                    and MongoDB for fast vector search and context-aware answer
-                    generation.
-                  </p>
+                  <div class="meta-item">
+                    <span class="meta-label">Date</span>
+                    <span class="meta-value">July 2025</span>
+                  </div>
+                </div>
 
-                  <!-- Preview Section -->
-                  <div class="media-preview-section">
-                    <div class="media-toggle">
-                      <button class="media-toggle-btn" data-project="1">
-                        <span class="media-text">Show Preview</span>
-                        <span class="expand-arrow">▼</span>
-                      </button>
-                    </div>
-                    <div class="media-content">
-                      <div class="media-gallery">
-                        <div class="media-item">
-                          <img
-                            src="images/projects/rag1.png"
-                            alt="Project Screenshot 1"
-                            class="media-image"
-                          />
-                        </div>
+                <p class="project-description-full">
+                  Designed and developed a mobile fitness app using React Native with Expo Router and React Native
+                  Elements.
+                  The app features a weekly workout planner, a daily water intake tracker with smart reminders,
+                  and a nutrition dashboard to monitor calorie and macronutrient goals. Focused on modular architecture,
+                  dark/light theming, and responsive, reusable UI components. Prepped for future backend integration
+                  with Supabase or Firebase.
+                </p>
 
-                        <div class="media-item">
-                          <img
-                            src="images/projects/rag2.png"
-                            alt="Project Demo"
-                            class="media-image"
-                          />
-                        </div>
+                <!-- Preview Section -->
+                <div class="media-preview-section">
+                  <div class="media-toggle">
+                    <button class="media-toggle-btn" data-project="1">
+                      <span class="media-text">Show Preview</span>
+                      <span class="expand-arrow">▼</span>
+                    </button>
+                  </div>
+                  <div class="media-content">
+                    <div class="media-gallery">
+                      <div class="media-item">
+                        <video src="images/projects/workoutAppDemo.mp4" autoplay muted loop playsinline
+                          class="media-video"></video>
+                        <div class="media-caption">Live demo</div>
                       </div>
                     </div>
                   </div>
-
-                  <div class="project-tech-full">
-                    <span class="tech-tag-full">Python</span>
-                    <span class="tech-tag-full">Qdrant</span>
-                    <span class="tech-tag-full">MongoDB</span>
-                  </div>
                 </div>
-              </div>
-            </div>
 
-            <!-- PROJECT 3: Fitness App -->
-            <div class="project-card" data-project="3">
-              <div class="project-header">
-                <div class="project-title">
-                  Fitness App
-                  <div class="expand-icon">▼</div>
-                </div>
-                <p class="project-preview">
-                  Workout planner and exercise tracker with personalized
-                  routines.
-                </p>
-                <div class="project-tech-preview">
-                  <span class="tech-tag-preview">React Native</span>
-                  <span class="tech-tag-preview">Python</span>
-                  <span class="tech-tag-preview">MongoDB</span>
-                </div>
-              </div>
-              <div class="project-content">
-                <div class="project-details">
-                  <div class="project-meta">
-                    <div class="meta-item">
-                      <span class="meta-label">Status</span>
-                      <span class="meta-value status-progress"
-                        >In Progress</span
-                      >
-                    </div>
-                    <div class="meta-item">
-                      <span class="meta-label">Date</span>
-                      <span class="meta-value">July 2024</span>
-                    </div>
-                  </div>
-                  <p class="project-description-full">
-                    Developed a fitness app using React Native and Python.
-                    Implemented GraphQL APIs and third-party integrations for
-                    exercise libraries. Personalized workout tracking and user
-                    analytics were core features.
-                  </p>
-
-                  <!-- Preview Section -->
-                  <div class="media-preview-section">
-                    <div class="media-toggle">
-                      <button class="media-toggle-btn" data-project="1">
-                        <span class="media-text">Show Preview</span>
-                        <span class="expand-arrow">▼</span>
-                      </button>
-                    </div>
-
-                    <div class="media-content">
-                      <div class="media-gallery">
-                        <div class="media-item">
-                          <img
-                            src="images/projects/workoutApp.png"
-                            alt="Project Screenshot 1"
-                            class="media-image"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="project-tech-full">
-                    <span class="tech-tag-full">React Native</span>
-                    <span class="tech-tag-full">Python</span>
-                    <span class="tech-tag-full">MongoDB</span>
-                    <span class="tech-tag-full">GraphQL</span>
-                  </div>
+                <div class="project-tech-full">
+                  <span class="tech-tag-full">React Native</span>
+                  <span class="tech-tag-full">Supabase</span>
+                  <span class="tech-tag-full">Authentication</span>
+                  <span class="tech-tag-full">TypeScript</span>
+                  <span class="tech-tag-full">Expo Router</span>
+                  <span class="tech-tag-full">React Native Elements</span>
+                  <span class="tech-tag-full">Theming</span>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- EXPERIENCE SECTION -->
-        <div class="projects-section" id="experience-section">
-          <div class="projects-list">
-            <!-- Experience 1: AI Research Intern -->
-            <div class="project-card" data-project="4">
-              <div class="project-header">
-                <div class="project-title">
-                  AI Research Intern
-                  <div class="expand-icon">▼</div>
-                </div>
-                <p class="project-preview">
-                  Created and maintained a chatbot with web scraping
-                  integration.
-                </p>
-                <div class="project-tech-preview">
-                  <span class="tech-tag-preview">Python</span>
-                  <span class="tech-tag-preview">Web Scraping</span>
-                  <span class="tech-tag-preview">Chatbot</span>
-                </div>
+
+          <!-- PROJECT 2: Language Learning App -->
+          <div class="project-card" data-project="2">
+            <div class="project-header">
+              <div class="project-title">
+                LingoMate – Language Learning App
+                <div class="expand-icon">▼</div>
               </div>
-              <div class="project-content">
-                <div class="project-details">
-                  <div class="project-meta">
-                    <div class="meta-item">
-                      <span class="meta-label">Location</span>
-                      <span class="meta-value">Cranford, NJ</span>
-                    </div>
-                    <div class="meta-item">
-                      <span class="meta-label">Date</span>
-                      <span class="meta-value">May 2023 – August 2023</span>
+              <p class="project-preview">
+                Immersive Android app for learning languages with flashcards, pronunciation feedback, and gamified
+                progression.
+              </p>
+              <div class="project-tech-preview">
+                <span class="tech-tag-preview">Android</span>
+                <span class="tech-tag-preview">Supabase</span>
+                <span class="tech-tag-preview">Firebase</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-details">
+                <div class="project-meta">
+                  <div class="meta-item">
+                    <span class="meta-label">Status</span>
+                    <span class="meta-value status-completed">Completed</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Date</span>
+                    <span class="meta-value">May 2025</span>
+                  </div>
+                </div>
+                <p class="project-description-full">
+                  Built an immersive language learning experience for Android focused on engaging users through
+                  flashcards,
+                  interactive quizzes, and real-time pronunciation feedback using a voice assistant. Authentication is
+                  powered
+                  by Firebase, while Supabase handles data storage and retrieval. The app features a personalized user
+                  profile,
+                  gamified dashboard, streak tracking, and daily challenges to drive consistent progress. Future updates
+                  will
+                  include AR-based object labeling and AI-powered conversational practice for deeper immersion.
+                </p>
+                <!-- Preview Section -->
+                <div class="media-preview-section">
+                  <div class="media-toggle">
+                    <button class="media-toggle-btn" data-project="2">
+                      <span class="media-text">Show Preview</span>
+                      <span class="expand-arrow">▼</span>
+                    </button>
+                  </div>
+                  <div class="media-content">
+                    <div class="media-gallery">
+                      <div class="media-item">
+                        <video src="images/projects/LingoMate.mp4" autoplay muted loop playsinline
+                          class="media-video"></video>
+                        <div class="media-caption">Live demo</div>
+                      </div>
                     </div>
                   </div>
-                  <p class="project-description-full">
-                    Spearheaded the development of an AI assistant chatbot.
-                    Built backend architecture for conversation storage and
-                    deployed web scrapers to enhance the knowledge base by 30%.
-                    Collaborated across departments to improve chatbot
-                    interaction design.
-                  </p>
-
-                  <div class="project-tech-full">
-                    <span class="tech-tag-full">Python</span>
-                    <span class="tech-tag-full">Web Scraping</span>
-                    <span class="tech-tag-full">MongoDB</span>
-                  </div>
+                </div>
+                <div class="project-tech-full">
+                  <span class="tech-tag-full">Android</span>
+                  <span class="tech-tag-full">Supabase</span>
+                  <span class="tech-tag-full">Firebase Auth</span>
+                  <span class="tech-tag-full">Text To Speech</span>
+                  <span class="tech-tag-full">Gamification</span>
+                  <span class="tech-tag-full">Multilingual Support</span>
                 </div>
               </div>
             </div>
+          </div>
 
-            <!-- Experience 2: Software Engineer Intern -->
-            <div class="project-card" data-project="5">
-              <div class="project-header">
-                <div class="project-title">
-                  Software Engineer Intern
-                  <div class="expand-icon">▼</div>
+          <!-- PROJECT 3: ResumeX-->
+          <div class="project-card" data-project="3">
+            <div class="project-header">
+              <div class="project-title">
+                ResumeX – AI-Powered Resume Builder
+                <div class="expand-icon">▼</div>
+              </div>
+              <p class="project-preview">
+                Full-stack application that generates tailored resumes using AI keyword matching and LaTeX templates.
+                Features intelligent AI-powered keyword matching that analyzes job descriptions and automatically
+                enhances resumes to improve ATS compatibility.
+              </p>
+              <div class="project-tech-preview">
+                <span class="tech-tag-preview">React</span>
+                <span class="tech-tag-preview">MongoDB</span>
+                <span class="tech-tag-preview">Next.js</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-details">
+                <div class="project-meta">
+                  <div class="meta-item">
+                    <span class="meta-label">Status</span>
+                    <span class="meta-value status-completed">Completed</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Date</span>
+                    <span class="meta-value">May 2025</span>
+                  </div>
                 </div>
-                <p class="project-preview">
-                  Built a full-stack application using React, Django, and
-                  MongoDB.
+
+                <p class="project-description-full">
+                  Built a comprehensive resume optimization platform that allows users to upload existing resumes or
+                  create new ones from stored profile data including job experience, education, and projects. The
+                  application features intelligent AI-powered keyword matching that analyzes job descriptions and
+                  automatically enhances resumes to improve ATS compatibility and relevance. Implemented a robust
+                  backend with Express.js and MongoDB for secure data persistence, enabling users to store and manage
+                  multiple resume versions. Integrated LaTeX rendering system to generate three professionally designed
+                  resume templates with pixel-perfect formatting. The platform streamlines the job application process
+                  by maintaining a centralized repository of user information while providing dynamic resume
+                  customization based on specific job requirements.
                 </p>
-                <div class="project-tech-preview">
-                  <span class="tech-tag-preview">React</span>
-                  <span class="tech-tag-preview">Django</span>
-                  <span class="tech-tag-preview">MongoDB</span>
+
+                <!-- Preview Section -->
+                <div class="media-preview-section">
+                  <div class="media-toggle">
+                    <button class="media-toggle-btn" data-project="3">
+                      <span class="media-text">Show Preview</span>
+                      <span class="expand-arrow">▼</span>
+                    </button>
+                  </div>
+                  <div class="media-content">
+                    <div class="media-gallery">
+                      <div class="media-item">
+                        <h3>Coming Soon!</h3>
+                        <!-- <video src="images/projects/wordle_demo.mp4" autoplay muted loop playsinline
+                          class="media-video"></video> -->
+                        <div class="media-caption">Live demo</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="project-tech-full">
+                  <span class="tech-tag-full">React</span>
+                  <span class="tech-tag-full">TypeScript</span>
+                  <span class="tech-tag-full">Next.js</span>
+                  <span class="tech-tag-full">MongoDB</span>
+                  <span class="tech-tag-full">LaTeX</span>
                 </div>
               </div>
-              <div class="project-content">
-                <div class="project-details">
-                  <div class="project-meta">
-                    <div class="meta-item">
-                      <span class="meta-label">Location</span>
-                      <span class="meta-value">Cranford, NJ</span>
-                    </div>
-                    <div class="meta-item">
-                      <span class="meta-label">Date</span>
-                      <span class="meta-value">May 2022 – September 2022</span>
+            </div>
+          </div>
+
+          <!-- PROJECT 4: Wordle-Like Game -->
+          <div class="project-card" data-project="4">
+            <div class="project-header">
+              <div class="project-title">
+                Wordle-Like Game
+                <div class="expand-icon">▼</div>
+              </div>
+              <p class="project-preview">
+                Android game mimicking Wordle with custom Jetpack Compose UI
+                and real-time updates.
+              </p>
+              <div class="project-tech-preview">
+                <span class="tech-tag-preview">Kotlin</span>
+                <span class="tech-tag-preview">Jetpack Compose</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-details">
+                <div class="project-meta">
+                  <div class="meta-item">
+                    <span class="meta-label">Status</span>
+                    <span class="meta-value status-completed">Completed</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Date</span>
+                    <span class="meta-value">February 2025</span>
+                  </div>
+                </div>
+
+                <p class="project-description-full">
+                  Developed a Wordle-inspired Android game using Jetpack
+                  Compose. Designed a dynamic UI with reusable composables,
+                  handled real-time game state, and ensured smooth user input
+                  interaction.
+                </p>
+
+                <!-- Preview Section -->
+                <div class="media-preview-section">
+                  <div class="media-toggle">
+                    <button class="media-toggle-btn" data-project="4">
+                      <span class="media-text">Show Preview</span>
+                      <span class="expand-arrow">▼</span>
+                    </button>
+                  </div>
+                  <div class="media-content">
+                    <div class="media-gallery">
+                      <div class="media-item">
+                        <video src="images/projects/wordle_demo.mp4" autoplay muted loop playsinline
+                          class="media-video"></video>
+                        <div class="media-caption">Live demo</div>
+                      </div>
                     </div>
                   </div>
-                  <p class="project-description-full">
-                    Developed a full-stack web application to manage operations.
-                    Led backend and frontend tasks with Django and React,
-                    performed database optimizations, and enforced best coding
-                    practices through code reviews.
-                  </p>
-                  <div class="project-tech-full">
-                    <span class="tech-tag-full">React</span>
-                    <span class="tech-tag-full">Django</span>
-                    <span class="tech-tag-full">MongoDB</span>
-                    <span class="tech-tag-full">REST API</span>
+                </div>
+
+                <div class="project-tech-full">
+                  <span class="tech-tag-full">Kotlin</span>
+                  <span class="tech-tag-full">Jetpack Compose</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 5: RAG System -->
+          <div class="project-card" data-project="5">
+            <div class="project-header">
+              <div class="project-title">
+                Retrieval-Augmented Generation (RAG) System
+                <div class="expand-icon">▼</div>
+              </div>
+              <p class="project-preview">
+                Context-aware response generation using Qdrant, Python, and
+                MongoDB.
+              </p>
+              <div class="project-tech-preview">
+                <span class="tech-tag-preview">Python</span>
+                <span class="tech-tag-preview">Qdrant</span>
+                <span class="tech-tag-preview">MongoDB</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-details">
+                <div class="project-meta">
+                  <div class="meta-item">
+                    <span class="meta-label">Status</span>
+                    <span class="meta-value status-completed">Completed</span>
                   </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Date</span>
+                    <span class="meta-value">November 2024</span>
+                  </div>
+                </div>
+                <p class="project-description-full">
+                  Built a RAG system in Python using data pipelines for
+                  embedding, transformation, and chunking. Integrated Qdrant
+                  and MongoDB for fast vector search and context-aware answer
+                  generation.
+                </p>
+
+                <!-- Preview Section -->
+                <div class="media-preview-section">
+                  <div class="media-toggle">
+                    <button class="media-toggle-btn" data-project="5">
+                      <span class="media-text">Show Preview</span>
+                      <span class="expand-arrow">▼</span>
+                    </button>
+                  </div>
+                  <div class="media-content">
+                    <div class="media-gallery">
+                      <div class="media-item">
+                        <img src="images/projects/rag1.png" alt="Project Screenshot 1" class="media-image" />
+                      </div>
+
+                      <div class="media-item">
+                        <img src="images/projects/rag2.png" alt="Project Demo" class="media-image" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="project-tech-full">
+                  <span class="tech-tag-full">Python</span>
+                  <span class="tech-tag-full">Qdrant</span>
+                  <span class="tech-tag-full">MongoDB</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+
+      <!-- EXPERIENCE SECTION -->
+      <div class="projects-section" id="experience-section">
+        <div class="projects-list">
+          <!-- Experience 1: AI Research Intern -->
+          <div class="project-card" data-project="6">
+            <div class="project-header">
+              <div class="project-title">
+                AI Research Intern
+                <div class="expand-icon">▼</div>
+              </div>
+              <p class="project-preview">
+                Created and maintained a chatbot with web scraping
+                integration.
+              </p>
+              <div class="project-tech-preview">
+                <span class="tech-tag-preview">Python</span>
+                <span class="tech-tag-preview">Web Scraping</span>
+                <span class="tech-tag-preview">Chatbot</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-details">
+                <div class="project-meta">
+                  <div class="meta-item">
+                    <span class="meta-label">Location</span>
+                    <span class="meta-value">Cranford, NJ</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Date</span>
+                    <span class="meta-value">May 2023 – August 2023</span>
+                  </div>
+                </div>
+                <p class="project-description-full">
+                  Spearheaded the development of an AI assistant chatbot.
+                  Built backend architecture for conversation storage and
+                  deployed web scrapers to enhance the knowledge base by 30%.
+                  Collaborated across departments to improve chatbot
+                  interaction design.
+                </p>
+
+                <div class="project-tech-full">
+                  <span class="tech-tag-full">Python</span>
+                  <span class="tech-tag-full">Web Scraping</span>
+                  <span class="tech-tag-full">MongoDB</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 2: Software Engineer Intern -->
+          <div class="project-card" data-project="7">
+            <div class="project-header">
+              <div class="project-title">
+                Software Engineer Intern
+                <div class="expand-icon">▼</div>
+              </div>
+              <p class="project-preview">
+                Built a full-stack application using React, Django, and
+                MongoDB.
+              </p>
+              <div class="project-tech-preview">
+                <span class="tech-tag-preview">React</span>
+                <span class="tech-tag-preview">Django</span>
+                <span class="tech-tag-preview">MongoDB</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-details">
+                <div class="project-meta">
+                  <div class="meta-item">
+                    <span class="meta-label">Location</span>
+                    <span class="meta-value">Cranford, NJ</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Date</span>
+                    <span class="meta-value">May 2022 – September 2022</span>
+                  </div>
+                </div>
+                <p class="project-description-full">
+                  Developed a full-stack web application to manage operations.
+                  Led backend and frontend tasks with Django and React,
+                  performed database optimizations, and enforced best coding
+                  practices through code reviews.
+                </p>
+                <div class="project-tech-full">
+                  <span class="tech-tag-full">React</span>
+                  <span class="tech-tag-full">Django</span>
+                  <span class="tech-tag-full">MongoDB</span>
+                  <span class="tech-tag-full">REST API</span>
                 </div>
               </div>
             </div>
@@ -362,6 +490,8 @@
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
-  </body>
+  </div>
+  <script src="script.js"></script>
+</body>
+
 </html>
